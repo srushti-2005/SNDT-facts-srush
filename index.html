@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNDT Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-display {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SNDT Women's University Facts</h1>
+        <div id="fact-display" class="fact-display">
+            Click the button to display a fact!
+        </div>
+        <button id="fact-button">Show Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                title: "Establishment",
+                description: "SNDT Women's University, also known as Shreemati Nathibai Damodar Thackersey Women's University, was established in 1916. It is the first women's university in India as well as in South-East Asia."
+            },
+            {
+                title: "Founder",
+                description: "The university was founded by Maharshi Dr. Dhondo Keshav Karve, a social reformer who dedicated his life to the cause of women's education and empowerment."
+            },
+            {
+                title: "Location",
+                description: "The main campus of SNDT Women's University is located in Mumbai, Maharashtra, with additional campuses in Pune and other parts of Maharashtra."
+            },
+            {
+                title: "Motto",
+                description: "The motto of the university is 'Sanskrita Stree Parashakti,' which translates to 'An Enlightened Woman is a Source of Infinite Strength.'"
+            },
+            {
+                title: "Affiliation",
+                description: "SNDT Women's University is affiliated with the University Grants Commission (UGC) of India."
+            },
+            {
+                title: "Courses Offered",
+                description: "The university offers a wide range of undergraduate, postgraduate, and doctoral programs across various disciplines, including arts, science, commerce, education, and technology."
+            },
+            {
+                title: "Distance Education",
+                description: "SNDT Women's University also provides distance education programs, making higher education accessible to women who cannot attend regular classes."
+            },
+            {
+                title: "Research and Development",
+                description: "The university is involved in various research and development activities, focusing on women's issues, education, and empowerment."
+            },
+            {
+                title: "Cultural and Extracurricular Activities",
+                description: "SNDT Women's University encourages students to participate in cultural, sports, and extracurricular activities, fostering a holistic development environment."
+            },
+            {
+                title: "Alumni",
+                description: "The university has a strong network of alumni who have excelled in various fields, contributing significantly to society and the nation."
+            }
+        ];
+
+        document.getElementById('fact-button').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const fact = facts[randomIndex];
+            document.getElementById('fact-display').innerHTML = `<strong>${fact.title}:</strong> ${fact.description}`;
+        });
+    </script>
+</body>
+</html>
